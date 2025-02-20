@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_social_network
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  mail:
+    host: localhost
+    port: 1025
+    username: brayanalexander098@gmail.com
+    password: 123
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enable: true
+        connectiontimout: 5000
+        timeout: 3000
+        writetimeout: 5000
+
+application:
+  security:
+    jwt:
+      time-expiration-ninutes: 30
+      secre-key: ZmpzZGY2MzRfc2Zqc2wqKmRramR1MzdqaG45d3FmeHd5b3BvNjfDsWZsa21mbGtzZG1kZmxdW19namlvaW8=
+    code-verify: 6
+    minutes-expired-activation: 1
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1

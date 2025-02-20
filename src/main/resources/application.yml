@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: book-network-api
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 5MB
+springdoc:
+  default-consumes-media-type: application/json
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+jwt:
+  time-expiration-ninutes: 30
+  secre-key: ZmpzZGY2MzRfc2Zqc2wqKmRramR1MzdqaG45d3FmeHd5b3BvNjfDsWZsa21mbGtzZG1kZmxdW19namlvaW8=
